@@ -1,0 +1,25 @@
+{
+  "name": "firebase-remote-config",
+  "description": "A angular.js module used to work with firebase remote config service.",
+  "main": "index.js",
+  "authors": [
+    "kmilo8346"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "firebase",
+    "remote",
+    "config"
+  ],
+  "homepage": "https://github.com/kmilo8346/firebase-remote-config",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.6.8"
+  }
+}
