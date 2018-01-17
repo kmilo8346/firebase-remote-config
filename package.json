@@ -1,6 +1,6 @@
 {
   "name": "firebase-remote-config",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A angular.js module used to work with firebase remote config service.",
   "main": "index.js",
   "scripts": {
