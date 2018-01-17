@@ -26,7 +26,7 @@
         function _provider() {
             var TAG = 'REMOTE CONFIG SERVICE: ';
             var DEFAULT_CACHE_DURATION = 2 * 60 * 60; // two hours
-            var MIN_CACHE_DURATION = 60; // 60 seconds
+            var MIN_CACHE_DURATION = 60; // 60 seconds  // TODO change because server will be throttling the client requests(5 requests per hour)
             var DEFAULT_DELAY_INTERVAL = 60 * 60 * 1000; // one hour
             var MIN_DELAY_INTERVAL = 60 * 1000; // 60 seconds
             
@@ -49,7 +49,7 @@
             }
 
             this.setCacheDuration = function(duration) {
-                var d = typeof duration === 'number' ? duration : DEFAULT_CACHE_DURATION;
+                var d = typeof duration === 'number' ? duration/1000 : DEFAULT_CACHE_DURATION;
                 if (d < MIN_CACHE_DURATION) {
                     console.log(TAG + 'Cache duration can\'t be lower than ' + MIN_CACHE_DURATION +
                     ', default cache duration is set to '
