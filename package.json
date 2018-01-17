@@ -1,0 +1,27 @@
+{
+  "name": "firebase-remote-config",
+  "version": "0.0.1",
+  "description": "A angular.js module used to work with firebase remote config service.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kmilo8346/firebase-remote-config.git"
+  },
+  "keywords": [
+    "firebase",
+    "remote",
+    "config"
+  ],
+  "author": "kmilo8346",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kmilo8346/firebase-remote-config/issues"
+  },
+  "homepage": "https://github.com/kmilo8346/firebase-remote-config#readme",
+  "dependencies": {
+    "angular": "^1.6.8"
+  }
+}
