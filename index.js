@@ -111,7 +111,9 @@
                 function _loadForNext() {
                     return $ionicPlatform.ready()
                         .then(function() {
-                            _checkPluginIsInstalled();
+                            if (!window.FirebasePlugin) {
+                                return;
+                            }
                             window.FirebasePlugin.activateFetched(function(activated) {
                                 // activated will be true if there was a fetched config activated,
                                 // or false if no fetched config was found, or the fetched config was already activated.
@@ -138,7 +140,9 @@
                     return $ionicPlatform.ready()
                         .then(function() {
                             var defer = $q.defer();
-                            _checkPluginIsInstalled();
+                            if (!window.FirebasePlugin) {
+                                return defer.reject(new Error('Firebase plugin is not installed in the current environment'));
+                            }
                             window.FirebasePlugin.fetch(cacheDuration, function () {
                                 console.log(TAG + 'Config was fetched');
                                 window.FirebasePlugin.activateFetched(function(activated) {
@@ -156,14 +160,6 @@
                             });
                             return defer.promise;
                         });
-                }
-
-                // private
-
-                function _checkPluginIsInstalled() {
-                    if (!window.FirebasePlugin) {
-                        throw new Error('Firebase plugin must be installed');
-                    }
                 }
 
             };
